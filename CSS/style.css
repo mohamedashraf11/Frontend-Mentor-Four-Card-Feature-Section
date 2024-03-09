@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --main-bg: hsl(0, 0%, 98%);
+  --heading: hsl(234, 12%, 34%);
+  --paragraph: hsl(229, 6%, 66%);
+  --shadow: rgba(69, 211, 211, 0.2);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  padding: 2rem;
+}
+
+.container > .intro-txt {
+  text-align: center;
+  margin: auto;
+}
+
+.intro-txt > h1 {
+  color: var(--heading);
+  word-spacing: 2px;
+  font-size: 24px;
+}
+
+.intro-txt > h1 > span {
+  font-weight: 300;
+}
+
+.intro-txt > p {
+  color: var(--paragraph);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 20px auto;
+  max-width: 440px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-top: 50px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.card-container .card-holder .card {
+  padding: 25px;
+  min-height: 220px;
+  position: relative;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  box-shadow: 0 10px 20px hsla(212, 86%, 64%, 0.239);
+}
+
+.card.one {
+  border-top: 5px solid #45d3d3;
+}
+.card.two {
+  border-top: 5px solid #ea5353;
+}
+.card.three {
+  border-top: 5px solid #fcaf4a;
+}
+.card.four {
+  border-top: 5px solid #549ef2;
+}
+
+.card > h3 {
+  color: var(--heading);
+  text-transform: capitalize;
+}
+
+.card > h3 + p {
+  color: var(--paragraph);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.card > img {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+
+
+
+
+@media (min-width: 874px) {
+  .container .intro-txt > h1 {
+    font-size: 30px;
+  }
+
+  .container .intro-txt > h1 + p {
+    font-size: 13px;
+  }
+
+  .card-container .card-holder.three {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .card-container .card-holder.one,
+  .card-container .card-holder.four {
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+}
+}
